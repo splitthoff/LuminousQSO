@@ -9,7 +9,7 @@ categories.forEach(cat => {
 
   files[cat].forEach(file => {
     const embed = document.createElement("embed");
-    embed.src = `files/${cat}/${file}`;
+    embed.src = `${cat}/${file}`;
     embed.type = "application/pdf";
     embed.width = "100%";
     embed.height = "400px";
