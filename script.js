@@ -12,7 +12,7 @@ categories.forEach(cat => {
     embed.src = `${cat}/${file}`;
     embed.type = "application/pdf";
     embed.width = "100%";
-    embed.height = "800px";
+    embed.height = ""100%";
 
     container.appendChild(embed);
   });
