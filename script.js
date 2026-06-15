@@ -1,17 +1,19 @@
-const categories = ["gold", "silver", "discarded"];
+const categories = ["s2"];
 
 const files = {
-  gold: ["1.png", "2.png"],
-  silver: ["3.png"],
-  discarded: ["4.png"]
+  s2: ["GaiaDR3763275719257657088.pdf"]
 };
 
 categories.forEach(cat => {
   const container = document.getElementById(cat);
 
   files[cat].forEach(file => {
-    const img = document.createElement("img");
-    img.src = `images/${cat}/${file}`;
-    container.appendChild(img);
+    const embed = document.createElement("embed");
+    embed.src = `files/${cat}/${file}`;
+    embed.type = "application/pdf";
+    embed.width = "100%";
+    embed.height = "400px";
+
+    container.appendChild(embed);
   });
 });
