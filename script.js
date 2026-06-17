@@ -10,7 +10,7 @@ categories.forEach(cat => {
 
   files[cat].forEach(file => {
     const img = document.createElement("img");
-    img.src = `images/${cat}/${file}`;
+    img.src = `${cat}/${file}`;
     container.appendChild(img);
   });
 });
